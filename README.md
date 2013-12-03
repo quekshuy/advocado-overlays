@@ -28,7 +28,7 @@ Here are some guidelines that I hope you can follow (which we learnt as we went 
 
 * Do a CSS reset before specifying the various CSS rules for your custom components.
 
-* Read up a bit on (OOCSS)[http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/] and try as far as possible to use SASS. This may take a while so I'm OK that you pick up SASS slowly.
+* Read up a bit on [OOCSS](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/) and try as far as possible to use SASS. This may take a while so I'm OK that you pick up SASS slowly.
 
 
 ##Process

@@ -22,7 +22,7 @@ The below are some things we learnt that you may already know. If you do already
 
 * We need to aim to be responsive, i.e. if we foresee that the user will have to wait after clicking a button, we will need to ensure that they are aware that something is happening in the background. You can see [this page](http://lab.hakim.se/ladda/) as an example. 
 
-Here are some guidelines that I hope you can follow (which we learnt as we went along):
+##Style Guide
 
 * __ALL__ CSS class names that we specify should be preceded with "advoc-". This prevents conflicts with existing classes on the store.
 
@@ -33,21 +33,21 @@ Here are some guidelines that I hope you can follow (which we learnt as we went 
 
 ##Process
 
-* Github & Git
+* __Github & Git__
 
   We will be using git and github to manage code and conduct progress reviews.
 
-* Pull requests as code review
+* __Pull requests as code review__
 
   As part of this mentorship, I hope to get to see frequent pull requests. In the 1st week, I hope to be able to see a pull request every 1-2 days so we can quickly rectify style issues and other tiny stuff. I don't mind if you're not committing and pushing large amounts of code; more importantly I just want to see something.
 
   We can ease up on this once we agree you are on firmer ground. 
 
-* Screenhero 
+* __Screenhero__
 
   I'm not going to be very responsive all the way until after 10th Dec 2013. But I am free to Screenhero in the late evenings.
 
-* IM (Google Hangouts/Line/iMessage)
+* __IM (Google Hangouts/Line/iMessage)__
 
   Let's pick a tool for IM, so you can reach me easily. I am also OK with iMessage if that's your preferred way.  Hangouts allows for video chats and screen-sharing, which is quite desirable as well.
 

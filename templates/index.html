@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <link href="../stylesheets/styles/overlay.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- place actual overlays here -->
+    <div class="advoc-modal-container">
+        <div id="advoc-modal-draft" class="advoc-modal" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="advoc-modal-dialog">
+                <div class="advoc-modal-content">
+                    <div class="advoc-modal-header">
+                        <button type="button" class="advoc-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="advoc-modal-title" id="modal-label">Modal title</h4>
+                    </div>
+                    <div class="advoc-modal-body">
+                        <p>The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                </div><!-- /.advoc-modal-content -->
+            </div><!-- /.advoc-modal-dialog -->
+        </div><!-- /.advoc-modal -->
+    </div>
+    <script src="../scripts/libs/jquery-1.10.2.min.js"></script>
+    <script src="../scripts/libs/bootstrap.js"></script>
+    <script>
+        $('#advoc-modal-draft').modal({
+                    show: true
+                });
+    </script>
+</body>
+</html>

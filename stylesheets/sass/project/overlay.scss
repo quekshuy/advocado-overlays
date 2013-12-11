@@ -1,5 +1,499 @@
 @import "../_reset.scss";
 @import "../base/_bootstrap.scss";
 
+//-------------------------------------
+// VARIABLES
+//-------------------------------------
 
+// Typography
+$header_text_color: rgb(81, 191, 133);
+
+$header_font_family: Verdana, Geneva, sans-serif;
+/*$header_font_family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;*/
+/*$header_font_family: "Arial Black", "Arial Bold", Gadget, sans-serif;*/
+/*$header_font_family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; */
+/*$header_font_family: Futura, "Trebuchet MS", Arial, sans-serif;*/
+
+$caption_font_family:  "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+$inputs_font_family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$footer_font_family: $inputs_font_family;
+
+$base_max_font_size: 2em;
+$base_text_color: rgb(162, 162, 162);
+
+// Header
+$modal_header_background_color: rgb(242, 242, 242);
+
+// Product Caption
+$caption_container_height: 84px;
+
+// Stepper
+$stepper_selected_background_color: $header_text_color;
+
+// Social Network Options
+$fb_button_color: #2b79b8;
+$twitter_button_color:#3ba2f8;
+
+$dashed_border_color: rgb(180, 180, 180);
+
+//-------------------------------------
+// BOOTSTRAP OVERRIDES
+//-------------------------------------
+
+.advoc-modal-container { 
+    .advoc-modal-body {
+        padding: 20px 0px 4px 0px;
+    }
+}
+
+//-------------------------------------
+// ACTUAL CSS RULES
+//-------------------------------------
+
+.advoc-modal-container { 
+
+    // ----------------
+    // HEADER
+    // ----------------
+    .advoc-modal-header .advoc-h1 { 
+        font-weight: bold;
+        letter-spacing: -2px;
+    }
+
+
+    // ----------------
+    // Button Styles
+    // ----------------
+    .advoc-btn {
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+
+        border: 0;
+
+        -webkit-font-smoothing: antialiased;
+        -webkit-box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.08);
+        -moz-box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.08);
+        box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .advoc-h1, .advoc-h2, .advoc-h3, .advoc-h4, .advoc-h5, .advoc-h6 { 
+        color: $header_text_color;
+        font-family: $header_font_family;
+    }
+
+    .advoc-h1 { 
+        font-size: $base_max_font_size;
+    }
+
+    .advoc-h2 { 
+        font-size: 0.818*$base_max_font_size;
+    }
+
+    .advoc-h3 { 
+        font-size: 0.818 * 0.818 * $base_max_font_size;
+    }
+
+
+    .advoc-modal-header, .advoc-modal-footer { 
+        background-color: $modal_header_background_color;
+    }
+
+    .advoc-pull-none { 
+        float: none;
+    }
+
+    .advoc-text-centered { 
+        text-align: center;
+    }
+
+    .advoc-product-image { 
+        width: auto;
+        // for test purposes
+        // remove once done with tests
+        height: 350px;
+    }
+
+    // ----------------
+    // PRODUCT CAPTION
+    // ----------------
+
+    .advoc-caption-container { 
+
+        margin-top: -1 * $caption_container_height;
+        /*height: $caption_container_height;*/
+        background-color: rgba(255, 255, 255, 0.5);
+        font-family: $caption_font_family;
+
+        border-top: { 
+            width: 2px;
+            style: dashed;
+            color: $dashed_border_color;
+        }
+
+        border-bottom: { 
+            width: 2px;
+            style: solid;
+            color: rgb(153, 153, 153);
+        }
+
+        .advoc-title { 
+            padding: 12px inherit;
+            font-family: $caption_font_family !important;
+        }
+
+        .advoc-prices { 
+
+            padding: 12px 0px;
+
+            border-left: {
+                style: solid;
+                color: rgb(180, 180, 180);
+                width: 1px;
+            }
+
+            & > div { 
+                font-family: $caption_font_family !important;
+            }
+        }
+
+        .advoc-compare-price { 
+            text-decoration: line-through;
+            color: $base_text_color;
+            padding-top: 4px;
+        }
+    }
+
+
+    // ----------------
+    // STEPPER MENU
+    // ----------------
+
+    .advoc-stepper {
+
+        font-family: $caption_font_family;
+        border-bottom: { 
+            width: 2px;
+            style: solid;
+            color: $header_text_color;
+        }
+
+        ul { 
+            margin-bottom: 0px;
+            height: 100%;
+        }
+
+        li { 
+            color: $base_text_color;
+            min-height: 76px;
+
+            padding: { 
+                top: 12px;
+                bottom: 12px;
+            }
+
+            border-right: { 
+                color: rgb(153, 153, 153);
+                style: solid;
+                width: 2px;
+            }
+
+            &.advoc-last { 
+                border: 0;
+            }
+
+            .advoc-step-num { 
+                float: left;
+                font-size: 2em;
+            }
+
+            .advoc-step-block { 
+                float: left;
+            }
+
+            .advoc-step-action { 
+                font-size: 1.25em;
+
+            }
+
+            .advoc-step-action-on { 
+                font-size: 1em;
+            }
+        }
+
+        // this rule ensures that the list items
+        // are of equal height in various resolutions
+        @media screen and (max-width: 480px) {
+            li { 
+                min-height: 128px;
+            }
+        }
+
+        li.selected { 
+            color: #fff;
+            background-color: $stepper_selected_background_color;
+            border: 0;
+        }
+    } // end .advoc-stepper
+
+    .advoc-step-action { 
+        font-size: 1.25em;
+    }
+
+    .advoc-step-action-on { 
+        font-size: 1em;
+    }
+    
+    // ----------------
+    // DYNAMIC PANELS
+    // ----------------
+
+    .advoc-step-panels { 
+
+        font-family: $caption_font_family;
+
+        // -----------------------------
+        // Facebook and Twitter buttons
+        // -----------------------------
+
+        .advoc-fb .advoc-logo {
+            background-image: url(../../images/facebook_logo.png);
+            background-repeat: no-repeat;
+        }
+
+        .advoc-twitter .advoc-logo { 
+            background-image: url(../../images/twitter_logo.png);
+            background-repeat: no-repeat;
+
+        }
+
+
+        // -----------------------------
+        // Panel Styles
+        // -----------------------------
+
+        .advoc-step-1 { 
+
+            font-family: $caption_font_family;
+
+            .advoc-heading { 
+                color: #000;
+            }
+
+            .advoc-caption { 
+                color: $base_text_color;
+                font-weight: normal;
+            }
+
+            ul.advoc-share-options { 
+
+                padding-top: 12px;
+
+                li.advoc-share-option { 
+
+                    margin-bottom: 4px;
+                    border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    width: 100%;
+
+                    &.advoc-fb { 
+                        background-color: $fb_button_color;
+                        color: #fff;
+                        font-size: 1.2em;
+
+                        .advoc-logo { 
+                            background-position-x: 16px;
+                            background-position-y: 8px;
+                        }
+                    }
+
+                    &.advoc-twitter {
+                        background-color: $twitter_button_color;
+                        color: #fff;
+                        font-size: 1.2em;
+
+                        .advoc-logo { 
+                            background-position: 6px 6px;
+                        }
+                    }
+
+                    .advoc-name { 
+                        width: 80%;
+                        float: left;
+                        text-align: center;
+                        font-size: 1.2em;
+                        margin: 8px 0;
+                    }
+                }
+            } // end /ul.advoc-share-options
+
+            .advoc-logo { 
+                width: 35px;
+                height: 35px;
+                float: left;
+                border-right: 2px solid #fff;
+                padding: 22px;
+            }
+
+        } //end .advoc-step-1
+
+        .advoc-step-2 { 
+            
+            padding-top: 12px; 
+            font-size: 1em;
+
+            textarea { 
+
+                width: 100%;
+                resize: none;
+                border-radius: 5px;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                height: 120px;
+                padding: 8px;
+                font-family: $inputs_font_family;
+
+                &.advoc-fb { 
+                    outline: none !important;
+                    border: 3px solid rgb(163,216,245);
+                    background-color: rgb(244, 251, 254);
+                }
+            }
+
+            .advoc-sharing-form { 
+                margin: 8px 0px;
+                font-size: 1em;
+            }
+
+            .advoc-btn { 
+
+                width: 100%;
+                font-size: 1.2em;
+
+                &.advoc-fb { 
+                    background-image: none;
+                    color: #fff;
+                    background-color: $fb_button_color;
+                    padding: 12px;
+
+                    img { 
+                        margin: 0 5px 0 -15px;
+                        opacity: 0.3;
+                    }
+                }
+            }
+
+        } //end .advoc-step-2
+
+        .advoc-step-3 { 
+
+            text-align: center;
+            color: $base_text_color;
+
+            .advoc-cart-option { 
+                margin-top: 12px;
+            }
+
+            .advoc-times {
+                font-size: 3em;
+             }
+            
+            label { 
+                display: block;
+                margin-bottom: 4px;
+                font-size: 1.25em;
+            }
+
+            .advoc-label { 
+                margin-bottom: 4px;
+            }
+
+            input[type=text] { 
+                
+                border-radius: 3px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                padding: 12px;
+                color: $base_text_color;
+                border: 1px solid rgb(230, 230, 230);
+                text-align: center;
+
+            }
+
+            .advoc-selector-wrapper { 
+
+                position: relative;
+                background-color: rgb(242, 242, 242);
+
+                width: 80%;
+                margin: 0 auto;
+                padding: 12px;
+                border-radius: 3px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border: 1px solid rgb(230, 230, 230);
+
+                select {
+                    background: transparent;
+                    border: 0;
+                    border-radius: 0;
+                    -webkit-appearance: none;
+                    color: $base_text_color;
+                    font-family: $inputs_font_family;
+                    width: 110%;
+                    text-align: center;
+                }
+
+                .advoc-down-arrow { 
+                    position: absolute;
+                    right: 10px;
+                    top: 40%;
+                    border-width: 8px 8px 0 8px;
+                    border-style: solid;
+                    border-color: $base_text_color transparent;
+                    pointer-events: none;
+                }
+            }
+
+            .advoc-subtotal-container { 
+                border-top: { 
+                    style: dashed;
+                    width: 2px;
+                    color: $dashed_border_color;
+                }
+                margin-top: 20px;
+                padding: 20px;
+
+                .advoc-label, .advoc-price { 
+                    padding-top: 8px;
+                    display: inline-block;
+                }
+
+                .advoc-price { 
+                    padding-top: 10px;
+                    margin-left: 8px;
+                    color: $header_text_color;
+                    font-size: 1.5em;
+                }
+            }
+
+            .advoc-btn.advoc-add-to-cart-btn { 
+                padding: 12px;
+                background-color: rgb(53, 178, 116);
+                color: #fff;
+            }
+
+        } //end .advoc-step-3
+    }
+
+    // ----------------
+    // FOOTER
+    // ----------------
+    .advoc-modal-footer { 
+        font-family: $footer_font_family;
+        font-size: 0.8em;
+        color: $base_text_color;
+    }
+}
 

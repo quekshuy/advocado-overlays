@@ -1,5 +1,7 @@
 *DS_Store
 *.swp
 *.swo
+HEAD
 
-docs/.DS_Store
+*sass-cache
+5ee60bd9d825725f53fa652aed9119b2f46b130f

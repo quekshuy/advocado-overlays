@@ -1,0 +1,25 @@
+/**
+    Advocado overlay reset.
+    Reset all items with a class with prefix "advoc-"
+*/
+div[class^=advoc-], 
+span[class^=advoc-], 
+a[class^=advoc-], 
+form[class^=advoc-], 
+ol[class^=advoc-], 
+ul[class^=advoc-] { 
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    line-height: 1;
+
+}
+
+ol[class^=advoc-], ul[class^=advoc-] { 
+    list-style: none;
+}
+

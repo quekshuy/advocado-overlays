@@ -52,7 +52,7 @@ p {
   bottom: 0px;
 }
 
-.advoccontainer {
+.advoc-modal-container {
   position: absolute;
   opacity:0.8;
   filter:alpha(opacity=40); /* For IE8 and earlier */
@@ -61,7 +61,7 @@ p {
   width: 100%;
 }
 
-.advocpopup {
+.advoc-modal-content {
   position: absolute;
   left: 5%;
   right: 5%;

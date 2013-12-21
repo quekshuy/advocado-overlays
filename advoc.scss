@@ -1,0 +1,720 @@
+///*
+//------------------------------------------------------------
+//SCSS VARIABLES
+//------------------------------------------------------------
+//*/
+$white: #ffffff;
+$black: #000000;
+$lightgrey: #C0C0C0;
+$grey: #999999;
+$darkgrey: #575757;
+$green: #45B571;
+$backgroundgrey: #EFEFEF;
+$fbcolor: #394F8E;
+$twcolor: #59BDEE;
+
+///*
+//------------------------------------------------------------
+//CSS.
+//------------------------------------------------------------
+//*/
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  height:100%;
+}
+
+body {
+margin:0;
+}
+
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #005580;
+  text-decoration: underline;
+}
+
+///*
+//------------------------------------------------------------
+//Content containers.
+//------------------------------------------------------------
+//*/
+.advoc-modal-container {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  background-image: url('advocbackground.jpg');
+  background-repeat: repeat-x;
+
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .advoc-steps .advoc-tick {
+    visibility: hidden;
+  }
+
+  .advoc-step2-fb-panel, .advoc-step2-tw-panel {
+    display: none;
+  }
+
+  .advoc-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  button {
+  display: block;
+  border: 0px;
+  margin: auto;
+  type: button;
+  background-color: $white;
+  }
+
+  ///*
+  //------------------------------------------------------------
+  //text
+  //------------------------------------------------------------
+  //*/
+
+  //b is used for step numbers
+  //h1 is used for titles/ large text
+  //h2, h3 used for prices
+  //h4, h5 used for steps prompt
+  //h6 used for footer
+
+  b {
+    font-family: "Bree Serif", sans-serif;
+    font-size: 2.2em;
+    line-height: 0.8;
+    margin: 0px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    
+    color: $darkgrey;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .advoc-stepper1 b {
+    color: $white;
+  }
+
+  p {
+    text-align: center;
+    margin: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: $grey;
+    font-size: 0.75em;
+  }
+
+  h1 {
+    margin: 0px;
+    text-align: center;
+    color: $green;
+
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+    font-size: 1.35em;
+  }
+
+  .advoc-header h1 {
+    letter-spacing: -2px;
+    font-size: 2em;
+  }
+
+  .advoc-step1-panel {
+    .advoc-prompt h1 {
+    color: $black;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+    }
+
+    .advoc-name h1 {
+    color: $white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    text-align: left;
+    }
+  }
+
+  .advoc-step2-fb-panel {
+    .advoc-fb-share h1 {
+    color: $white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    }
+  }
+
+  .advoc-step2-tw-panel {
+    .advoc-tw-share h1 {
+    color: $white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    }
+  }
+
+
+  h2, h3 {
+    margin: 0px;
+    text-align: center;
+    padding: 2px;
+    font-family: "Bree Serif", Helvetica, Arial, sans-serif;
+  }
+
+  h2 {
+    color: $green;
+    line-height: 0.9;
+  }
+
+  .advoc-compare-price h3 {
+    text-decoration: line-through;
+    line-height: 0.9;
+    font-size: 1em;
+  }
+
+  h4, h5 {
+    margin: 0px;
+    color: $darkgrey;
+    line-height: 1;
+  }
+
+  h4 {
+    font-size: 0.70em;
+  }
+
+  h5 {
+    font-size: 0.55em;
+  }
+
+  .advoc-stepper1 h4, .advoc-stepper1 h5 {
+    color: $white;
+  }
+
+  h6 {
+    margin: 0px;
+    text-align: center;
+    //CHECKline-height: 1;
+    color: $lightgrey;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .advoc-step2-panel h6 {
+    margin: 5%;
+    //CHECKline-height: 1;
+    color: $lightgrey;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  ///*
+  //------------------------------------------------------------
+  //Main components itself.
+  //------------------------------------------------------------
+  //*/
+  .advoc-modal-content {
+    position: absolute;
+    background-color: $white;
+    
+    /*border: 0px solid $grey;
+    border: 0px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;*/
+    outline: none;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+
+    left: 4%;
+    right: 4%;
+    bottom: 1%;
+    top: 1%;
+  }
+
+  .advoc-header {
+    background-color: $backgroundgrey;
+    height: 10%;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    display: table;
+    text-align: center;
+  }
+
+  .advoc-body {
+    position: absolute;
+    background-color: $white;
+    height: 90%;
+    width: 100%;
+    bottom: 0px;
+  }
+
+  .advoc-footer {
+    position: absolute;
+    background-color: $backgroundgrey;
+    height: 15%;
+    width: 100%;
+    bottom: 0px;
+    display: table;
+    text-align: center;
+  }
+
+  ///*
+  //------------------------------------------------------------
+  //Product display.
+  //------------------------------------------------------------
+  //*/
+  .advoc-product-image {
+    position: relative;
+    height: 50%;
+    background-image: url('images/product.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .advoc-logo {
+    height: 20px;
+    width: 80px;
+    top: 10px;
+    right: 0px;
+    position: absolute;
+    background-image: url('images/logo.png'); 
+    background-repeat: no-repeat;
+    background-size: 72px 20px;
+    z-index: 10;
+  }
+
+  .advoc-caption-container {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0px;
+
+    border-top-width: 3px;
+    border-top-style: dashed;
+    border-top-color: #b4b4b4;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #b4b4b4;
+  }
+
+  .advoc-transparent {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+    opacity:0.75;
+    filter:alpha(opacity=75); /* For IE8 and earlier */
+  }
+
+  .advoc-title {
+    position: relative;
+    height: 100%;
+    width: 75%;
+    float: left;
+    z-index: 1;
+    display: table;
+    text-align: center;
+  }
+
+  .advoc-prices {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    display: table;
+    text-align: center;
+
+    float: right;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #b4b4b4;
+    z-index: 1;
+  }
+
+  ///*
+  //------------------------------------------------------------
+  //Stepper.
+  //------------------------------------------------------------
+  //*/
+  .advoc-sharing {
+    position: relative;
+    height: 50%;
+    width: 100%;
+  }
+
+  .advoc-steps {
+    position: relative;
+    height: 20%;
+    width: 100%;
+
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: $green;
+  }
+
+  .advoc-stepper1 {
+    width: 39%;
+    height: 100%;
+    float: left;
+    background-color: $green;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s; /* Safari */
+  }
+
+  .advoc-stepper2 {
+    width: 29%;
+    height: 100%;
+    float: left;
+
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #b4b4b4;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s; /* Safari */
+  }
+
+  .advoc-stepper3 {
+    @extend .advoc-stepper2;
+    width: 32%;
+  }
+
+  .advoc-step-num {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: table;
+    text-align: center;
+  }
+
+  .advoc-step-block {
+    @extend .advoc-step-num;
+    width: 75%;
+    float: right;
+    text-align: left;
+  }
+
+  ///*
+  //------------------------------------------------------------
+  //Step panel (Social Platform Selection)
+  //------------------------------------------------------------
+  //*/
+  .advoc-step1-panel {
+    position: relative;
+    width: 100%;
+    height: 65%;
+  }
+
+  .advoc-step2-fb-panel, .advoc-step2-tw-panel {
+    position: relative;
+    width: 100%;
+    height: 65%;
+    top: 0px;
+  }
+
+  .advoc-prompt {
+    position: relative;
+    width: 100%;
+    height: 35%;
+    display: table;
+    text-align: center;
+  }
+
+  .advoc-social {
+    position: relative;
+    width: 100%;
+    height: 65%;
+    display: table;
+    text-align: center;
+  }
+
+  .advoc-fb {
+    position: relative;
+    background: $backgroundgrey;
+    width: 180px;
+    height: 40px;
+    border-radius: 3px;
+    text-align: center;
+    margin: 0px auto 4px auto;
+  }
+
+  .advoc-fb:hover {
+    background: $fbcolor;
+  }
+
+  .advoc-fb-logo {
+    width: 25%;
+    height: 100%;
+    background-image: url('images/facebook_logo.png');
+    background-position: 80% 75%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    float: left;
+  }
+
+  .advoc-tw {
+    @extend .advoc-fb;
+    background: $backgroundgrey;
+  }
+
+  .advoc-tw:hover {
+    background: $twcolor;
+  }
+
+  .advoc-tw-logo {
+    @extend .advoc-fb-logo;
+    background-image: url('images/twitter_logo.png');
+    background-position: center;
+  }
+
+  .advoc-name {
+    width: 75%;
+    height: 100%;
+    float: right;
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-left-color: $white;
+    display: table;
+    text-align: center;
+  }
+
+  ///*
+  //------------------------------------------------------------
+  //Step panel (Social Sharing)
+  //------------------------------------------------------------
+  //*/
+
+  form {
+    height: 100%;
+    width: 100%;
+    display: table;
+    text-align: center;
+  }
+
+  .advoc-input-panel {
+    position: relative;
+    height: 60%;
+    width: 90%; 
+    margin: 0px auto 5px auto; 
+  }
+
+  .advoc-fb-textarea {
+    background-color: #F1F5FD;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $fbcolor;
+
+    background-image: url('images/facebook_logo.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-position: 8px 12px;
+
+    resize: none;
+    padding: 15px;
+  }
+
+  .advoc-step2-fb-panel button, .advoc-step2-tw-panel button {
+    display: table;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .advoc-submit {
+    position: relative;
+    height: 35px;
+    width: 90%; 
+    margin: auto; 
+  }
+
+  .advoc-fb-share {
+    width: 100%;
+    height: 100%;
+
+    background-color: $fbcolor;
+    background-image: url('images/facebook_logo.png');
+    background-position: 5%;
+    background-size: auto 75%;
+    background-repeat: no-repeat;
+
+    padding-left: 15%;
+    border-radius: 5px;
+    margin: auto;
+    display: table;
+    text-align: center;
+  }
+
+  .advoc-tw-textarea {
+    @extend .advoc-fb-textarea;
+    background-image: url('images/twitter_logo.png');
+    border-color: $twcolor;
+    background-color: #F2FAFE;
+  }
+
+  .advoc-tw-share {
+    @extend .advoc-fb-share;
+    background-image: url('images/twitter_logo.png');
+    background-color: $twcolor;
+  }
+
+  ///*
+  //------------------------------------------------------------
+  //Media Queries: Responsive viewport sizes.
+  //------------------------------------------------------------
+  //*
+    @media only screen and (max-height: 560px) {
+  }
+
+  @media only screen and (max-height: 500px) {
+
+  }
+
+  @media only screen and (max-height: 450px){
+
+  }
+
+  @media only screen and (max-width: 600px) {
+  }
+
+  @media only screen and (max-width: 550px) {
+  }
+
+  @media only screen and (max-width: 520px) {
+  }
+
+  @media only screen and (max-width: 500px) {
+  }
+
+  @media only screen and (max-width: 400px) {
+  }
+}
+
+
+
+///*
+//------------------------------------------------------------
+//CSS3 Transitions between steps
+//------------------------------------------------------------
+//*/
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.3s;-moz-animation-duration:0.3s;-ms-animation-duration:0.3s;-o-animation-duration:0.3s;animation-duration:0.3s;}.animated.hinge{-webkit-animation-duration:0.3s;-moz-animation-duration:0.3s;-ms-animation-duration:0.3s;-o-animation-duration:0.3s;animation-duration:0.3s;}@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+  } 100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(20px);
+  }
+  
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(20px);
+  }
+  
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+
+@-moz-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+  
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-20px);
+  }
+}
+
+@-o-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+  
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  -moz-animation-name: fadeOutLeft;
+  -o-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}

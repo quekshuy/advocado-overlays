@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Advocado</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./advoc.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="./scripts/libs/advoc.js"></script><!--This is for the transitions between steps-->
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Bree+Serif|Roboto+Condensed">
+	<meta name="viewport" content="width=device-width" />
+
+	<!--<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">-->
+  </head>
+  <body>
+  	<div class="advoc-modal-container">
+  		<div class="advoc-modal-content">
+		  	<div class="advoc-header">
+		  		<div class="advoc-center">
+					<h1>SHARE & SAVE 10% NOW! </h1>
+				</div>
+			</div>
+			<div class="advoc-body">
+				<div class="advoc-logo"></div>
+				<div class="advoc-product-image">
+					<div class="advoc-caption-container">
+						<div class ="advoc-transparent">
+						</div>
+						<div class="advoc-title">
+							<div class="advoc-center">
+								<h1>Christmas Decos</h1>
+							</div>
+						</div>
+						<div class="advoc-prices">
+							<div class="advoc-center">
+								<div class="advoc-current-price">
+									<h2>$23.85</h2>
+								</div>
+								<div class="advoc-compare-price">
+									<h3>$26.50</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="advoc-sharing">
+					<div class="advoc-steps">
+						<div class="advoc-stepper1">
+							<div class="advoc-step-num"><b>1</b></div>
+							<div class="advoc-step-block">
+								<div class="advoc-center">
+									<div class="advoc-step-action"><h4>CHOOSE <span class="advoc-tick">&#x2713;</span></h4></div>
+									<div class="advoc-action-on"><h5>A SOCIAL NETWORK</h5></div>
+								</div>
+							</div>
+						</div>
+						<div class="advoc-stepper2">
+							<div class="advoc-step-num"><b>2</b></div>
+							<div class="advoc-step-block">
+								<div class="advoc-center">
+									<div class="advoc-step-action"><h4>SHARE IT <span class="advoc-tick">&#x2713;</span></h4></div>
+									<div class="advoc-action-on"><h5>WITH FRIENDS</h5></div>
+								</div>
+							</div>
+						</div>
+						<div class="advoc-stepper3">
+							<div class="advoc-step-num"><b>3</b></div>
+							<div class="advoc-step-block">
+								<div class="advoc-center">
+									<div class="advoc-step-action"><h4>EARN <span class="advoc-tick">&#x2713;</span></h4></div>
+									<div class="advoc-action-on"><h5>YOUR DISCOUNT</h5></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="advoc-step1-panel">
+						<div class="advoc-prompt">
+							<div class="advoc-center">
+								<h1>Select a social network</h1>
+								<p>Please grant Advocado permission before you share</p>
+							</div>
+						</div>
+						<div class="advoc-social">
+							<div class="advoc-center">
+								<button onclick="toStep2fb()">
+									<div class="advoc-fb">
+			                        	<div class="advoc-fb-logo"></div>
+			                        	<div class="advoc-name">
+			                        		<div class="advoc-center">
+				                        		<h1>Facebook</h1>
+				                        	</div>
+			                        	</div>
+									</div>
+								</button>
+								<button onclick="toStep2tw()">
+									<div class="advoc-tw">
+			                        	<div class="advoc-tw-logo"></div>
+			                        	<div class="advoc-name">
+			                        		<div class="advoc-center">
+			                        			<h1>Twitter</h1>
+			                        		</div>
+			                        	</div>
+									</div>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="advoc-step2-fb-panel">
+						<form action="toStep3()">
+			                <div class="advoc-center">
+								<div class="advoc-input-panel">
+									<textarea class="advoc-fb-textarea" placeholder="Type a message here (Eg. I am going to buy American Gothic Socks at a 10% discount!)"></textarea>
+								</div>
+								<div class="advoc-submit">
+									<button type="submit">
+										<div class="advoc-fb-share">
+				                        	<div class="advoc-center">
+												<h1>Share and get a 10% discount!</h1>
+											</div>
+										</div>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="advoc-step2-tw-panel">
+						<form action="toStep3()">
+			                <div class="advoc-center">
+								<div class="advoc-input-panel">
+									<textarea class="advoc-tw-textarea" placeholder="Type a message here (Eg. I am going to buy American Gothic Socks at a 10% discount!)"></textarea>
+								</div>
+								<div class="advoc-submit">
+									<button type="submit">
+										<div class="advoc-tw-share">
+				                        	<div class="advoc-center">
+												<h1>Share and get a 10% discount!</h1>
+											</div>
+										</div>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="advoc-footer">
+						<div class="advoc-center">
+							<h6>*Your post will be shared only once. </br>We do not share this information with third parties.</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

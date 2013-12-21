@@ -16,8 +16,9 @@ An actual demo of Advocado can be found [here](http://www.goodnightmacaroon.co/c
 
 * __Initial commit__
 
-Okay, this might be a bit long, since it's supposed to log all the (correct/ completed) things that I've done.
-Nearly lost all my work; luckily dropbox had version histories.. 
+Okay, I'll try to keep this concised, but it's supposed to log all the (correct/ completed) things that I've done.
+
+Nearly lost all my work an hour ago.. But luckily dropbox had version histories, haha.
 
 Anyway, below are the current updates:
 

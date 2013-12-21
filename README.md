@@ -21,7 +21,11 @@ Nearly lost all my work; luckily dropbox had version histories..
 
 Anyway, below are the current updates:
 
+-----
+
+
 * __First Git Sync (22 Dec 4:30am):__
+
 
 -----
 Changed/ redid entire .CSS file into .SCSS file.
@@ -50,7 +54,7 @@ Fixed buttons
 
 Created twitter layout (+colors +logos +buttons)
 
-
+-----
 * __NEXT TO DO:__
 
 1. Redo media queries for different mobile sizes (Simulate different device viewports) and correct any display issues

@@ -21,7 +21,7 @@ Nearly lost all my work; luckily dropbox had version histories..
 
 Anyway, below are the current updates:
 
-First Git Sync (22 Dec 4:30am):
+* __First Git Sync (22 Dec 4:30am):__
 
 -----
 Changed/ redid entire .CSS file into .SCSS file.

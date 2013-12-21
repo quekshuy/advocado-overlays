@@ -26,18 +26,30 @@ Anyway, below are the current updates:
 -----
 Changed/ redid entire .CSS file into .SCSS file.
 
------
-Corrected overlay size
-Added :hover effect (Will not work on mobile though; we need some discussion on this) 
-Corrected white space problem (I'd experimented quite a few solutions and decided vertical-align of display:table will be the best method)
-Fixed text sizes and proportions
+__Added more comments in .scss files as a guide__
 
 -----
-(In step 2)
+Corrected overlay size
+
+Added :hover effect (Will not work on mobile though; we need some discussion on this) 
+
+Corrected white space problem (I'd experimented quite a few solutions and decided vertical-align of display:table will be the best method)
+
+Fixed text sizes and proportions (i.e. Make all of the text sizes more similar to the mockups)
+
+Redid buttons (Logo is positioned better)
+
+-----
+__(In step 2)__
+
 Created internal padding for textarea
+
 Fixed position and size of logo in text area.
+
 Fixed buttons
+
 Created twitter layout (+colors +logos +buttons)
+
 
 * __NEXT TO DO:__
 

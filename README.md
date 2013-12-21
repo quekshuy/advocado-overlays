@@ -15,6 +15,29 @@ An actual demo of Advocado can be found [here](http://www.goodnightmacaroon.co/c
 ##Updates
 
 * __Initial commit__
+
 Okay, this might be a bit long, since it's supposed to log all the (correct/ completed) things that I've done.
+Nearly lost all my work; luckily dropbox had version histories.. 
 
+Anyway, below are the current updates:
 
+First Git Sync (22 Dec 4:30am):
+
+Changed/ redid entire .CSS file into .SCSS file.
+
+Corrected overlay size
+Added :hover effect (Will not work on mobile though; we need some discussion on this) 
+Corrected white space problem (I'd experimented quite a few solutions and decided vertical-align of display:table will be the best method)
+Fixed text sizes and proportions
+
+(In step 2)
+Created internal padding for textarea
+Fixed position and size of logo in text area.
+Fixed buttons
+Created twitter layout (+colors +logos +buttons)
+
+*__NEXT TO DO:__
+
+1. Redo media queries for different mobile sizes (Simulate different device viewports) and correct any display issues
+2. Discuss changes that might have to be made from the design (A. Mobile :hover issues B. I removed a few weird paddings as seen in the design I'd received, for example the padding on the right in the textarea of step 2.)
+3. Discuss how to move on to step 3 (Or improve on existing transitions). I suppose you guys already have a server set up for sharing purposes? Do I need to put in a caller for FB/TW APIs? Or how else should I make the HTML file? (Currently, the share button will submit the form into another file)

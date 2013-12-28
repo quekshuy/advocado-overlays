@@ -64,7 +64,7 @@ a:focus {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #333333;
-  background-image: url('advocbackground.jpg');
+  background-image: url('../../images/advocbackground.jpg');
   background-repeat: repeat-x;
 
   //This part makes sure padding does not overflow from boxes
@@ -299,7 +299,7 @@ a:focus {
   .advoc-product-image {
     position: relative;
     height: 50%;
-    background-image: url('images/product.png'); 
+    background-image: url('../../images/product.png'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -313,7 +313,7 @@ a:focus {
     top: 10px;
     right: 0px;
     position: absolute;
-    background-image: url('images/logo.png'); 
+    background-image: url('../../images/logo.png'); 
     background-repeat: no-repeat;
     background-size: 72px 20px;
     z-index: 10;
@@ -484,7 +484,7 @@ a:focus {
   .advoc-fb-logo {
     width: 25%;
     height: 100%;
-    background-image: url('images/facebook_logo.png');
+    background-image: url('../../images/facebook_logo.png');
     background-position: 80% 75%;
     background-size: 60%;
     background-repeat: no-repeat;
@@ -502,7 +502,7 @@ a:focus {
 
   .advoc-tw-logo {
     @extend .advoc-fb-logo;
-    background-image: url('images/twitter_logo.png');
+    background-image: url('../../images/twitter_logo.png');
     background-position: center;
   }
 
@@ -547,7 +547,7 @@ a:focus {
     border-style: solid;
     border-color: $fbcolor;
 
-    background-image: url('images/facebook_logo.png');
+    background-image: url('../../images/facebook_logo.png');
     background-position: top left;
     background-repeat: no-repeat;
     background-position: 8px 12px;
@@ -576,7 +576,7 @@ a:focus {
     height: 100%;
 
     background-color: $fbcolor;
-    background-image: url('images/facebook_logo.png');
+    background-image: url('../../images/facebook_logo.png');
     background-position: 5%;
     background-size: auto 75%;
     background-repeat: no-repeat;
@@ -590,14 +590,14 @@ a:focus {
 
   .advoc-tw-textarea {
     @extend .advoc-fb-textarea;
-    background-image: url('images/twitter_logo.png');
+    background-image: url('../../images/twitter_logo.png');
     border-color: $twcolor;
     background-color: #F2FAFE;
   }
 
   .advoc-tw-share {
     @extend .advoc-fb-share;
-    background-image: url('images/twitter_logo.png');
+    background-image: url('../../images/twitter_logo.png');
     background-color: $twcolor;
   }
 

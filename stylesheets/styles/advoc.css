@@ -25,7 +25,7 @@ a:focus {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #333333;
-  background-image: url("advocbackground.jpg");
+  background-image: url("../../images/advocbackground.jpg");
   background-repeat: repeat-x; }
   .advoc-modal-container *,
   .advoc-modal-container *:before,
@@ -158,7 +158,7 @@ a:focus {
   .advoc-modal-container .advoc-product-image {
     position: relative;
     height: 50%;
-    background-image: url("images/product.png");
+    background-image: url("../../images/product.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; }
@@ -168,7 +168,7 @@ a:focus {
     top: 10px;
     right: 0px;
     position: absolute;
-    background-image: url("images/logo.png");
+    background-image: url("../../images/logo.png");
     background-repeat: no-repeat;
     background-size: 72px 20px;
     z-index: 10; }
@@ -286,7 +286,7 @@ a:focus {
   .advoc-modal-container .advoc-fb-logo, .advoc-modal-container .advoc-tw-logo {
     width: 25%;
     height: 100%;
-    background-image: url("images/facebook_logo.png");
+    background-image: url("../../images/facebook_logo.png");
     background-position: 80% 75%;
     background-size: 60%;
     background-repeat: no-repeat;
@@ -296,7 +296,7 @@ a:focus {
   .advoc-modal-container .advoc-tw:hover {
     background: #59bdee; }
   .advoc-modal-container .advoc-tw-logo {
-    background-image: url("images/twitter_logo.png");
+    background-image: url("../../images/twitter_logo.png");
     background-position: center; }
   .advoc-modal-container .advoc-name {
     width: 75%;
@@ -325,7 +325,7 @@ a:focus {
     border-width: 2px;
     border-style: solid;
     border-color: #394f8e;
-    background-image: url("images/facebook_logo.png");
+    background-image: url("../../images/facebook_logo.png");
     background-position: top left;
     background-repeat: no-repeat;
     background-position: 8px 12px;
@@ -346,7 +346,7 @@ a:focus {
     width: 100%;
     height: 100%;
     background-color: #394f8e;
-    background-image: url("images/facebook_logo.png");
+    background-image: url("../../images/facebook_logo.png");
     background-position: 5%;
     background-size: auto 75%;
     background-repeat: no-repeat;
@@ -356,11 +356,11 @@ a:focus {
     display: table;
     text-align: center; }
   .advoc-modal-container .advoc-tw-textarea {
-    background-image: url("images/twitter_logo.png");
+    background-image: url("../../images/twitter_logo.png");
     border-color: #59bdee;
     background-color: #F2FAFE; }
   .advoc-modal-container .advoc-tw-share {
-    background-image: url("images/twitter_logo.png");
+    background-image: url("../../images/twitter_logo.png");
     background-color: #59bdee; }
 
 .animated {

@@ -29,9 +29,9 @@ $twcolor: #59BDEE;
   text-align: center;
 }
 
-@mixin advoc-height-width($height,$width) {
-  height: $height;
+@mixin advoc-width-height($width,$height) {
   width: $width;
+  height: $height;
 }
 
 ///*
@@ -77,7 +77,7 @@ a:focus {
   position: absolute;
 
    /* Display & Box Model */
-  @include advoc-height-width(100%,100%);
+  @include advoc-width-height(100%,100%);
   margin: 0;
   
     /* Other */
@@ -105,7 +105,8 @@ a:focus {
 
   //  Other steps are hidden at first
   .advoc-step2-fb-panel,
-  .advoc-step2-tw-panel {
+  .advoc-step2-tw-panel,
+  .advoc-step3-panel {
     display: none;
   }
 
@@ -132,9 +133,10 @@ a:focus {
   //*/
 
   //  b is used for step numbers! (By default vertically centralised)
+  //  p is used for instruction!
   //  h1 is used for titles/ large text!
   //  h2, h3 used for prices!
-  //  h4, h5 used for steps prompt!
+  //  h4, h5 used for steps name!
   //  h6 used for footer!
 
   b {
@@ -280,7 +282,7 @@ a:focus {
 
   .advoc-header {
     @include advoc-table();
-    @include advoc-height-width(8%,100%);
+    @include advoc-width-height(100%,8%);
 
     border-bottom: 1px solid #e5e5e5;
     background-color: $backgroundgrey;
@@ -298,7 +300,7 @@ a:focus {
 
   .advoc-footer {
     @include advoc-table();
-    @include advoc-height-width(14%,100%);
+    @include advoc-width-height(100%,14%);
 
     position: absolute;
     bottom: 0px;
@@ -321,7 +323,7 @@ a:focus {
 
   //  The logo is placed above all other things as a static overlay
   .advoc-logo {
-    @include advoc-height-width(20px,80px);
+    @include advoc-width-height(80px,20px);
     position: absolute;
     top: 10px;
     right: 0px;
@@ -332,11 +334,11 @@ a:focus {
   }
 
   .advoc-caption-container {
-    @include advoc-height-width(45px,100%);
+    @include advoc-width-height(100%,45px);
     position: absolute;
     bottom: 0px;
 
-    border-top-width: 3px;
+    border-top-width: 2px;
     border-top-style: dashed;
     border-top-color: #b4b4b4;
     border-bottom-width: 3px;
@@ -346,7 +348,7 @@ a:focus {
 
   //  This is to create the transparent effect as seen in the mockups
   .advoc-transparent {
-    @include advoc-height-width(100%,100%);
+    @include advoc-width-height(100%,100%);
     position: absolute;
     
     opacity:0.75;
@@ -356,7 +358,7 @@ a:focus {
 
   .advoc-title {
     @include advoc-table();
-    @include advoc-height-width(100%,75%);
+    @include advoc-width-height(75%,100%);
     position: relative;
 
     float: left;
@@ -365,7 +367,7 @@ a:focus {
 
   .advoc-prices {
     @include advoc-table();
-    @include advoc-height-width(100%,25%);
+    @include advoc-width-height(25%,100%);
     position: relative;
     float: right;
     
@@ -382,12 +384,12 @@ a:focus {
   //*/
 
   .advoc-sharing {
-    @include advoc-height-width(50%,100%);
+    @include advoc-width-height(100%,50%);
     position: relative;
   }
 
   .advoc-steps {
-    @include advoc-height-width(18%,100%);
+    @include advoc-width-height(100%,18%);
     position: relative;
 
     border-bottom-width: 2px;
@@ -396,7 +398,7 @@ a:focus {
   }
 
   .advoc-stepper1 {
-    @include advoc-height-width(100%,39%);
+    @include advoc-width-height(39%,100%);
     float: left;
     
     transition: background-color 2s;
@@ -405,7 +407,7 @@ a:focus {
   }
 
   .advoc-stepper2 {
-    @include advoc-height-width(100%,29%);
+    @include advoc-width-height(29%,100%);
     float: left;
 
     border-left-width: 1px;
@@ -422,7 +424,7 @@ a:focus {
 
   .advoc-step-num {
     @include advoc-table();
-    @include advoc-height-width(100%,25%);
+    @include advoc-width-height(25%,100%);
     position: relative;
     float: left;
   }
@@ -436,34 +438,35 @@ a:focus {
 
   ///*
   //------------------------------------------------------------
-  //Step panel (Social Platform Selection)
+  //Step panel (Choosing: Social Platform)
   //------------------------------------------------------------
   //*/
 
   .advoc-step1-panel,
   .advoc-step2-fb-panel,
-  .advoc-step2-tw-panel {
-    @include advoc-height-width(68%,100%);
+  .advoc-step2-tw-panel,
+  .advoc-step3-panel {
+    @include advoc-width-height(100%,68%);
     position: relative;
     top: 0px;
   }
 
   .advoc-prompt {
     @include advoc-table();
-    @include advoc-height-width(30%,100%);
+    @include advoc-width-height(100%,30%);
     position: relative;
   }
 
   .advoc-social {
     @include advoc-table();
-    @include advoc-height-width(70%,100%);
+    @include advoc-width-height(100%,70%);
     position: relative;
   }
 
   .advoc-fb {
     position: relative;
 
-    @include advoc-height-width(40px,180px);
+    @include advoc-width-height(180px,40px);
     margin: 0px auto 4px auto;
 
     border-radius: 3px;
@@ -478,7 +481,7 @@ a:focus {
   .advoc-fb-logo {
     float: left;
 
-    @include advoc-height-width(100%,25%);
+    @include advoc-width-height(25%,100%);
 
     background: 80% 75% no-repeat url('../../images/facebook_logo.png');
     background-size: 60%;
@@ -503,7 +506,7 @@ a:focus {
     @include advoc-table();
     float: right;
 
-    @include advoc-height-width(100%,75%);
+    @include advoc-width-height(75%,100%);
     
     border-left-width: 3px;
     border-left-style: solid;
@@ -516,32 +519,33 @@ a:focus {
   //------------------------------------------------------------
   //*/
 
-  form {
+  .advoc-step2-fb-panel form,
+  .advoc-step2-tw-panel form, {
     @include advoc-table();
-    @include advoc-height-width(100%,100%);
+    @include advoc-width-height(100%,100%);
   }
 
   .advoc-input-panel {
     position: relative;
-    @include advoc-height-width(60%,90%);
+    @include advoc-width-height(90%,60%);
     margin: 0px auto 5px auto; 
   }
 
   .advoc-step2-fb-panel button,
   .advoc-step2-tw-panel button {
     @include advoc-table();
-    @include advoc-height-width(100%,100%);
+    @include advoc-width-height(100%,100%);
     padding: 0px;
   }
 
   .advoc-submit {
-    @include advoc-height-width(35px,90%);
+    @include advoc-width-height(90%,35px);
     position: relative;
     margin: auto; 
   }
 
   .advoc-fb-textarea {
-    @include advoc-height-width(100%,100%);
+    @include advoc-width-height(100%,100%);
     border-radius: 3px;
     border: solid 2px $fbcolor;
 
@@ -553,7 +557,7 @@ a:focus {
 
   .advoc-fb-share {
     @include advoc-table();
-    @include advoc-height-width(100%,100%);
+    @include advoc-width-height(100%,100%);
 
     background: $fbcolor 5% no-repeat url('../../images/facebook_logo.png');
     background-size: auto 75%;
@@ -574,6 +578,54 @@ a:focus {
     @extend .advoc-fb-share;
     background-color: $twcolor;
     background-image: url('../../images/twitter_logo.png');
+  }
+
+  ///*
+  //------------------------------------------------------------
+  //Step panel (Earning discounts)
+  //------------------------------------------------------------
+  //*/
+
+  .advoc-step3-panel form {
+    @include advoc-table();
+    @include advoc-width-height(90%,100%);
+    position: relative;
+    margin: auto;
+  }
+
+  .advoc-options {
+    @include advoc-table();
+    @include advoc-width-height(100%,45%);
+    position: relative;
+
+    border-bottom-width: 2px;
+    border-bottom-style: dashed;
+    border-bottom-color: #b4b4b4;
+  }
+
+  .advoc-dropdown-container {
+    position: relative;
+    margin: auto;
+  }
+
+  .advoc-param-container {
+    @include advoc-table();
+    @include advoc-width-height(30%,80%);
+    position: relative;
+    float: left;
+  }
+
+  .advoc-select-container {
+    @include advoc-table();
+    @include advoc-width-height(30%,80%);
+    position: relative;
+    float: right;
+  }
+
+  .advoc-add-to-cart {
+    @include advoc-table();
+    @include advoc-width-height(100%,55%);
+    position: relative;
   }
 
   ///*

@@ -20,8 +20,8 @@ a:focus {
   /* Positioning */
   position: absolute;
   /* Display & Box Model */
-  height: 100%;
   width: 100%;
+  height: 100%;
   margin: 0;
   /* Other */
   background: white repeat-x url("../../images/advocbackground.jpg");
@@ -37,7 +37,8 @@ a:focus {
   .advoc-modal-container .advoc-steps .advoc-tick {
     visibility: hidden; }
   .advoc-modal-container .advoc-step2-fb-panel,
-  .advoc-modal-container .advoc-step2-tw-panel {
+  .advoc-modal-container .advoc-step2-tw-panel,
+  .advoc-modal-container .advoc-step3-panel {
     display: none; }
   .advoc-modal-container .advoc-center, .advoc-modal-container b {
     display: table-cell;
@@ -139,8 +140,8 @@ a:focus {
   .advoc-modal-container .advoc-header {
     display: table;
     text-align: center;
-    height: 8%;
     width: 100%;
+    height: 8%;
     border-bottom: 1px solid #e5e5e5;
     background-color: #efefef; }
   .advoc-modal-container .advoc-body {
@@ -152,8 +153,8 @@ a:focus {
   .advoc-modal-container .advoc-footer {
     display: table;
     text-align: center;
-    height: 14%;
     width: 100%;
+    height: 14%;
     position: absolute;
     bottom: 0px;
     background-color: #efefef; }
@@ -163,8 +164,8 @@ a:focus {
     background: center no-repeat url("../../images/product.png");
     background-size: contain; }
   .advoc-modal-container .advoc-logo {
-    height: 20px;
     width: 80px;
+    height: 20px;
     position: absolute;
     top: 10px;
     right: 0px;
@@ -172,19 +173,19 @@ a:focus {
     background-size: 72px 20px;
     z-index: 10; }
   .advoc-modal-container .advoc-caption-container {
-    height: 45px;
     width: 100%;
+    height: 45px;
     position: absolute;
     bottom: 0px;
-    border-top-width: 3px;
+    border-top-width: 2px;
     border-top-style: dashed;
     border-top-color: #b4b4b4;
     border-bottom-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: #b4b4b4; }
   .advoc-modal-container .advoc-transparent {
-    height: 100%;
     width: 100%;
+    height: 100%;
     position: absolute;
     opacity: 0.75;
     filter: alpha(opacity=75);
@@ -193,16 +194,16 @@ a:focus {
   .advoc-modal-container .advoc-title {
     display: table;
     text-align: center;
-    height: 100%;
     width: 75%;
+    height: 100%;
     position: relative;
     float: left;
     z-index: 1; }
   .advoc-modal-container .advoc-prices {
     display: table;
     text-align: center;
-    height: 100%;
     width: 25%;
+    height: 100%;
     position: relative;
     float: right;
     border-left-width: 1px;
@@ -210,27 +211,27 @@ a:focus {
     border-left-color: #b4b4b4;
     z-index: 1; }
   .advoc-modal-container .advoc-sharing {
-    height: 50%;
     width: 100%;
+    height: 50%;
     position: relative; }
   .advoc-modal-container .advoc-steps {
-    height: 18%;
     width: 100%;
+    height: 18%;
     position: relative;
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: #45b571; }
   .advoc-modal-container .advoc-stepper1 {
-    height: 100%;
     width: 39%;
+    height: 100%;
     float: left;
     transition: background-color 2s;
     -webkit-transition: background-color 2s;
     /* Safari */
     background-color: #45b571; }
   .advoc-modal-container .advoc-stepper2, .advoc-modal-container .advoc-stepper3 {
-    height: 100%;
     width: 29%;
+    height: 100%;
     float: left;
     border-left-width: 1px;
     border-left-style: solid;
@@ -243,8 +244,8 @@ a:focus {
   .advoc-modal-container .advoc-step-num, .advoc-modal-container .advoc-step-block {
     display: table;
     text-align: center;
-    height: 100%;
     width: 25%;
+    height: 100%;
     position: relative;
     float: left; }
   .advoc-modal-container .advoc-step-block {
@@ -253,27 +254,28 @@ a:focus {
     text-align: left; }
   .advoc-modal-container .advoc-step1-panel,
   .advoc-modal-container .advoc-step2-fb-panel,
-  .advoc-modal-container .advoc-step2-tw-panel {
-    height: 68%;
+  .advoc-modal-container .advoc-step2-tw-panel,
+  .advoc-modal-container .advoc-step3-panel {
     width: 100%;
+    height: 68%;
     position: relative;
     top: 0px; }
   .advoc-modal-container .advoc-prompt {
     display: table;
     text-align: center;
-    height: 30%;
     width: 100%;
+    height: 30%;
     position: relative; }
   .advoc-modal-container .advoc-social {
     display: table;
     text-align: center;
-    height: 70%;
     width: 100%;
+    height: 70%;
     position: relative; }
   .advoc-modal-container .advoc-fb, .advoc-modal-container .advoc-tw {
     position: relative;
-    height: 40px;
     width: 180px;
+    height: 40px;
     margin: 0px auto 4px auto;
     border-radius: 3px;
     text-align: center;
@@ -282,8 +284,8 @@ a:focus {
     background-color: #394f8e; }
   .advoc-modal-container .advoc-fb-logo, .advoc-modal-container .advoc-tw-logo {
     float: left;
-    height: 100%;
     width: 25%;
+    height: 100%;
     background: 80% 75% no-repeat url("../../images/facebook_logo.png");
     background-size: 60%; }
   .advoc-modal-container .advoc-tw {
@@ -297,36 +299,37 @@ a:focus {
     display: table;
     text-align: center;
     float: right;
-    height: 100%;
     width: 75%;
+    height: 100%;
     border-left-width: 3px;
     border-left-style: solid;
     border-left-color: white; }
-  .advoc-modal-container form {
+  .advoc-modal-container .advoc-step2-fb-panel form,
+  .advoc-modal-container .advoc-step2-tw-panel form {
     display: table;
     text-align: center;
-    height: 100%;
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
   .advoc-modal-container .advoc-input-panel {
     position: relative;
-    height: 60%;
     width: 90%;
+    height: 60%;
     margin: 0px auto 5px auto; }
   .advoc-modal-container .advoc-step2-fb-panel button,
   .advoc-modal-container .advoc-step2-tw-panel button {
     display: table;
     text-align: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
     padding: 0px; }
   .advoc-modal-container .advoc-submit {
-    height: 35px;
     width: 90%;
+    height: 35px;
     position: relative;
     margin: auto; }
   .advoc-modal-container .advoc-fb-textarea, .advoc-modal-container .advoc-tw-textarea {
-    height: 100%;
     width: 100%;
+    height: 100%;
     border-radius: 3px;
     border: solid 2px #394f8e;
     background: #f1f5fd 3px 6px no-repeat url("../../images/facebook_logo.png");
@@ -335,8 +338,8 @@ a:focus {
   .advoc-modal-container .advoc-fb-share, .advoc-modal-container .advoc-tw-share {
     display: table;
     text-align: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background: #394f8e 5% no-repeat url("../../images/facebook_logo.png");
     background-size: auto 75%;
     padding-left: 15%;
@@ -349,6 +352,45 @@ a:focus {
   .advoc-modal-container .advoc-tw-share {
     background-color: #59bdee;
     background-image: url("../../images/twitter_logo.png"); }
+  .advoc-modal-container .advoc-step3-panel form {
+    display: table;
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    margin: auto; }
+  .advoc-modal-container .advoc-options {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 45%;
+    position: relative;
+    border-bottom-width: 2px;
+    border-bottom-style: dashed;
+    border-bottom-color: #b4b4b4; }
+  .advoc-modal-container .advoc-dropdown-container {
+    position: relative;
+    margin: auto; }
+  .advoc-modal-container .advoc-param-container {
+    display: table;
+    text-align: center;
+    width: 30%;
+    height: 80%;
+    position: relative;
+    float: left; }
+  .advoc-modal-container .advoc-select-container {
+    display: table;
+    text-align: center;
+    width: 30%;
+    height: 80%;
+    position: relative;
+    float: right; }
+  .advoc-modal-container .advoc-add-to-cart {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 55%;
+    position: relative; }
 
 .animated {
   -webkit-animation-fill-mode: both;

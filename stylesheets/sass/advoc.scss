@@ -263,7 +263,10 @@ a:focus {
 
   .advoc-modal-content {
     position: absolute;
-    background-color: $white;
+    left: 4%;
+    right: 4%;
+    bottom: 1%;
+    top: 1%;
     
     /*
       //  For border insert this
@@ -271,42 +274,42 @@ a:focus {
       border: 0px solid rgba(0, 0, 0, 0.2);
       border-radius: 0px;
     */
-
+    //  Shadow effect
     outline: none;
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-
-    left: 4%;
-    right: 4%;
-    bottom: 1%;
-    top: 1%;
+    
+    background-color: $white;
   }
 
   .advoc-header {
     @include advoc-table();
-
-    background-color: $backgroundgrey;
     height: 10%;
     width: 100%;
+
     border-bottom: 1px solid #e5e5e5;
+    background-color: $backgroundgrey;
   }
 
   .advoc-body {
     position: absolute;
-    background-color: $white;
+    bottom: 0px;
+
     height: 90%;
     width: 100%;
-    bottom: 0px;
+
+    background-color: $white;
   }
 
   .advoc-footer {
     @include advoc-table();
-
     position: absolute;
-    background-color: $backgroundgrey;
+    bottom: 0px;
+
     height: 15%;
     width: 100%;
-    bottom: 0px;
+    
+    background-color: $backgroundgrey;
   }
 
   ///*
@@ -317,7 +320,9 @@ a:focus {
 
   .advoc-product-image {
     position: relative;
+
     height: 50%;
+
     background-image: url('../../images/product.png'); 
     background-repeat: no-repeat;
     background-position: center;
@@ -325,13 +330,14 @@ a:focus {
   }
 
   //  The logo is placed above all other things as a static overlay
-
   .advoc-logo {
-    height: 20px;
-    width: 80px;
+    position: absolute;
     top: 10px;
     right: 0px;
-    position: absolute;
+
+    height: 20px;
+    width: 80px;
+    
     background-image: url('../../images/logo.png'); 
     background-repeat: no-repeat;
     background-size: 72px 20px;
@@ -340,9 +346,10 @@ a:focus {
 
   .advoc-caption-container {
     position: absolute;
+    bottom: 0px;
+
     height: 50px;
     width: 100%;
-    bottom: 0px;
 
     border-top-width: 3px;
     border-top-style: dashed;
@@ -353,22 +360,22 @@ a:focus {
   }
 
   //  This is to create the transparent effect as seen in the mockups
-
   .advoc-transparent {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: $white;
+    
     opacity:0.75;
     filter:alpha(opacity=75); /* For IE8 and earlier */
+    background-color: $white;
   }
 
   .advoc-title {
     @include advoc-table();
-
     position: relative;
     height: 100%;
     width: 75%;
+
     float: left;
     z-index: 1;
   }
@@ -376,10 +383,11 @@ a:focus {
   .advoc-prices {
     @include advoc-table();
     position: relative;
+    float: right;
+
     width: 25%;
     height: 100%;
-
-    float: right;
+    
     border-left-width: 1px;
     border-left-style: solid;
     border-left-color: #b4b4b4;
@@ -409,18 +417,19 @@ a:focus {
   }
 
   .advoc-stepper1 {
+    float: left;
     width: 39%;
     height: 100%;
-    float: left;
-    background-color: $green;
+    
     transition: background-color 2s;
     -webkit-transition: background-color 2s; /* Safari */
+    background-color: $green;
   }
 
   .advoc-stepper2 {
+    float: left;
     width: 29%;
     height: 100%;
-    float: left;
 
     border-left-width: 1px;
     border-left-style: solid;
@@ -436,17 +445,17 @@ a:focus {
 
   .advoc-step-num {
     @include advoc-table();
-
     position: relative;
+    float: left;
+
     width: 25%;
     height: 100%;
-    float: left;
   }
 
   .advoc-step-block {
     @extend .advoc-step-num;
-    width: 75%;
     float: right;
+    width: 75%;
     text-align: left;
   }
 
@@ -462,16 +471,17 @@ a:focus {
     height: 65%;
   }
 
-  .advoc-step2-fb-panel, .advoc-step2-tw-panel {
+  .advoc-step2-fb-panel,
+  .advoc-step2-tw-panel {
     position: relative;
+    top: 0px;
+
     width: 100%;
     height: 65%;
-    top: 0px;
   }
 
   .advoc-prompt {
     @include advoc-table();
-
     position: relative;
     width: 100%;
     height: 35%;
@@ -479,7 +489,6 @@ a:focus {
 
   .advoc-social {
     @include advoc-table();
-
     position: relative;
     width: 100%;
     height: 65%;
@@ -487,12 +496,14 @@ a:focus {
 
   .advoc-fb {
     position: relative;
-    background: $backgroundgrey;
+
     width: 180px;
     height: 40px;
+    margin: 0px auto 4px auto;
+
     border-radius: 3px;
     text-align: center;
-    margin: 0px auto 4px auto;
+    background: $backgroundgrey;
   }
 
   .advoc-fb:hover {
@@ -500,13 +511,15 @@ a:focus {
   }
 
   .advoc-fb-logo {
+    float: left;
+
     width: 25%;
     height: 100%;
+
     background-image: url('../../images/facebook_logo.png');
     background-position: 80% 75%;
     background-size: 60%;
     background-repeat: no-repeat;
-    float: left;
   }
 
   .advoc-tw {
@@ -526,10 +539,11 @@ a:focus {
 
   .advoc-name {
     @include advoc-table();
+    float: right;
 
     width: 75%;
     height: 100%;
-    float: right;
+    
     border-left-width: 3px;
     border-left-style: solid;
     border-left-color: $white;
@@ -543,7 +557,6 @@ a:focus {
 
   form {
     @include advoc-table();
-
     height: 100%;
     width: 100%;
   }
@@ -556,7 +569,6 @@ a:focus {
   }
 
   .advoc-fb-textarea {
-    background-color: #F1F5FD;
     height: 100%;
     width: 100%;
 
@@ -572,11 +584,12 @@ a:focus {
 
     resize: none;
     padding: 15px;
+    background-color: #F1F5FD;
   }
 
-  .advoc-step2-fb-panel button, .advoc-step2-tw-panel button {
+  .advoc-step2-fb-panel button,
+  .advoc-step2-tw-panel button {
     @include advoc-table();
-
     height: 100%;
     width: 100%;
     padding: 0px;
@@ -591,7 +604,6 @@ a:focus {
 
   .advoc-fb-share {
     @include advoc-table();
-
     width: 100%;
     height: 100%;
 
@@ -625,7 +637,7 @@ a:focus {
   //------------------------------------------------------------
   //*
 
-  //Media queries has not been done yet! However, the displays should now work on iOS already.
+  //  Media queries has not been done yet! However, the displays should now work on iOS already.
 
   @media only screen and (max-height: 560px) {
   }

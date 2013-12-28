@@ -29,6 +29,11 @@ $twcolor: #59BDEE;
   text-align: center;
 }
 
+@mixin advoc-height-width($height,$width) {
+  height: $height;
+  width: $width;
+}
+
 ///*
 //------------------------------------------------------------
 //Actual CSS.
@@ -72,14 +77,12 @@ a:focus {
   position: absolute;
 
    /* Display & Box Model */
-  height: 100%;
-  width: 100%;
+  @include advoc-height-width(100%,100%);
   margin: 0;
   
     /* Other */
-  background-color: white;
-  background-image: url('../../images/advocbackground.jpg');
-  background-repeat: repeat-x;
+  background: white repeat-x url('../../images/advocbackground.jpg');
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #333333;
@@ -155,8 +158,8 @@ a:focus {
 
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 0.75em;
-    color: $grey;
+    font-size: 0.72em;
+    color: $lightgrey;
   }
 
   h1 {
@@ -164,22 +167,24 @@ a:focus {
 
     text-align: center;    
     font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-    font-size: 1.35em;
+    font-size: 1.30em;
     color: $green;    
   }
 
   //  Only the header has largest text than all other elements
   .advoc-header h1 {
     letter-spacing: -2px;
-    font-size: 2em;
+    font-size: 1.8em;
+    line-height: 0.9;
   }
 
   //  In step one, the prompt is black and the names (FB/TW) are white
   .advoc-step1-panel {
     .advoc-prompt h1 {
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1;
-      color: $black;
+      line-height: 0.9;
+      font-weight: normal;
+      color: $darkgrey;
     }
 
     .advoc-name h1 {
@@ -191,22 +196,11 @@ a:focus {
   }
 
   //  In step two, the prompt is white
-  //  Facebook settings
-  .advoc-step2-fb-panel {
-    .advoc-fb-share h1 {
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: left;
-      color: $white;
-    }
-  }
-
-  //  Twitter settings
-  .advoc-step2-tw-panel {
-    .advoc-tw-share h1 {
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: left;
-      color: $white;
-    }
+  .advoc-step2-fb-panel h1,
+  .advoc-step2-tw-panel h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: $white;
   }
 
   h2,
@@ -221,6 +215,7 @@ a:focus {
   //  Price tag is green
   h2 {
     line-height: 0.9;
+    font-size: 1.4em;
     color: $green;
   }
 
@@ -250,6 +245,7 @@ a:focus {
   h6 {
     margin: 0px;
 
+    line-height: 0.9;
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
     color: $lightgrey;
@@ -284,8 +280,7 @@ a:focus {
 
   .advoc-header {
     @include advoc-table();
-    height: 10%;
-    width: 100%;
+    @include advoc-height-width(8%,100%);
 
     border-bottom: 1px solid #e5e5e5;
     background-color: $backgroundgrey;
@@ -295,7 +290,7 @@ a:focus {
     position: absolute;
     bottom: 0px;
 
-    height: 90%;
+    height: 92%;
     width: 100%;
 
     background-color: $white;
@@ -303,12 +298,11 @@ a:focus {
 
   .advoc-footer {
     @include advoc-table();
+    @include advoc-height-width(14%,100%);
+
     position: absolute;
     bottom: 0px;
 
-    height: 15%;
-    width: 100%;
-    
     background-color: $backgroundgrey;
   }
 
@@ -320,36 +314,27 @@ a:focus {
 
   .advoc-product-image {
     position: relative;
-
     height: 50%;
-
-    background-image: url('../../images/product.png'); 
-    background-repeat: no-repeat;
-    background-position: center;
+    background: center no-repeat url('../../images/product.png'); 
     background-size: contain;
   }
 
   //  The logo is placed above all other things as a static overlay
   .advoc-logo {
+    @include advoc-height-width(20px,80px);
     position: absolute;
     top: 10px;
     right: 0px;
 
-    height: 20px;
-    width: 80px;
-    
-    background-image: url('../../images/logo.png'); 
-    background-repeat: no-repeat;
+    background: no-repeat url('../../images/logo.png'); 
     background-size: 72px 20px;
     z-index: 10;
   }
 
   .advoc-caption-container {
+    @include advoc-height-width(45px,100%);
     position: absolute;
     bottom: 0px;
-
-    height: 50px;
-    width: 100%;
 
     border-top-width: 3px;
     border-top-style: dashed;
@@ -361,9 +346,8 @@ a:focus {
 
   //  This is to create the transparent effect as seen in the mockups
   .advoc-transparent {
+    @include advoc-height-width(100%,100%);
     position: absolute;
-    height: 100%;
-    width: 100%;
     
     opacity:0.75;
     filter:alpha(opacity=75); /* For IE8 and earlier */
@@ -372,9 +356,8 @@ a:focus {
 
   .advoc-title {
     @include advoc-table();
+    @include advoc-height-width(100%,75%);
     position: relative;
-    height: 100%;
-    width: 75%;
 
     float: left;
     z-index: 1;
@@ -382,11 +365,9 @@ a:focus {
 
   .advoc-prices {
     @include advoc-table();
+    @include advoc-height-width(100%,25%);
     position: relative;
     float: right;
-
-    width: 25%;
-    height: 100%;
     
     border-left-width: 1px;
     border-left-style: solid;
@@ -401,25 +382,22 @@ a:focus {
   //*/
 
   .advoc-sharing {
+    @include advoc-height-width(50%,100%);
     position: relative;
-    height: 50%;
-    width: 100%;
   }
 
   .advoc-steps {
+    @include advoc-height-width(18%,100%);
     position: relative;
-    height: 20%;
-    width: 100%;
 
-    border-bottom-width: 3px;
+    border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: $green;
   }
 
   .advoc-stepper1 {
+    @include advoc-height-width(100%,39%);
     float: left;
-    width: 39%;
-    height: 100%;
     
     transition: background-color 2s;
     -webkit-transition: background-color 2s; /* Safari */
@@ -427,9 +405,8 @@ a:focus {
   }
 
   .advoc-stepper2 {
+    @include advoc-height-width(100%,29%);
     float: left;
-    width: 29%;
-    height: 100%;
 
     border-left-width: 1px;
     border-left-style: solid;
@@ -445,11 +422,9 @@ a:focus {
 
   .advoc-step-num {
     @include advoc-table();
+    @include advoc-height-width(100%,25%);
     position: relative;
     float: left;
-
-    width: 25%;
-    height: 100%;
   }
 
   .advoc-step-block {
@@ -465,66 +440,53 @@ a:focus {
   //------------------------------------------------------------
   //*/
 
-  .advoc-step1-panel {
-    position: relative;
-    width: 100%;
-    height: 65%;
-  }
-
+  .advoc-step1-panel,
   .advoc-step2-fb-panel,
   .advoc-step2-tw-panel {
+    @include advoc-height-width(68%,100%);
     position: relative;
     top: 0px;
-
-    width: 100%;
-    height: 65%;
   }
 
   .advoc-prompt {
     @include advoc-table();
+    @include advoc-height-width(30%,100%);
     position: relative;
-    width: 100%;
-    height: 35%;
   }
 
   .advoc-social {
     @include advoc-table();
+    @include advoc-height-width(70%,100%);
     position: relative;
-    width: 100%;
-    height: 65%;
   }
 
   .advoc-fb {
     position: relative;
 
-    width: 180px;
-    height: 40px;
+    @include advoc-height-width(40px,180px);
     margin: 0px auto 4px auto;
 
     border-radius: 3px;
     text-align: center;
-    background: $backgroundgrey;
+    background-color: $backgroundgrey;
   }
 
   .advoc-fb:hover {
-    background: $fbcolor;
+    background-color: $fbcolor;
   }
 
   .advoc-fb-logo {
     float: left;
 
-    width: 25%;
-    height: 100%;
+    @include advoc-height-width(100%,25%);
 
-    background-image: url('../../images/facebook_logo.png');
-    background-position: 80% 75%;
+    background: 80% 75% no-repeat url('../../images/facebook_logo.png');
     background-size: 60%;
-    background-repeat: no-repeat;
   }
 
   .advoc-tw {
     @extend .advoc-fb;
-    background: $backgroundgrey;
+    background-color: $backgroundgrey;
   }
 
   .advoc-tw:hover {
@@ -541,8 +503,7 @@ a:focus {
     @include advoc-table();
     float: right;
 
-    width: 75%;
-    height: 100%;
+    @include advoc-height-width(100%,75%);
     
     border-left-width: 3px;
     border-left-style: solid;
@@ -557,61 +518,45 @@ a:focus {
 
   form {
     @include advoc-table();
-    height: 100%;
-    width: 100%;
+    @include advoc-height-width(100%,100%);
   }
 
   .advoc-input-panel {
     position: relative;
-    height: 60%;
-    width: 90%; 
+    @include advoc-height-width(60%,90%);
     margin: 0px auto 5px auto; 
-  }
-
-  .advoc-fb-textarea {
-    height: 100%;
-    width: 100%;
-
-    border-radius: 3px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: $fbcolor;
-
-    background-image: url('../../images/facebook_logo.png');
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-position: 8px 12px;
-
-    resize: none;
-    padding: 15px;
-    background-color: #F1F5FD;
   }
 
   .advoc-step2-fb-panel button,
   .advoc-step2-tw-panel button {
     @include advoc-table();
-    height: 100%;
-    width: 100%;
+    @include advoc-height-width(100%,100%);
     padding: 0px;
   }
 
   .advoc-submit {
+    @include advoc-height-width(35px,90%);
     position: relative;
-    height: 35px;
-    width: 90%; 
     margin: auto; 
+  }
+
+  .advoc-fb-textarea {
+    @include advoc-height-width(100%,100%);
+    border-radius: 3px;
+    border: solid 2px $fbcolor;
+
+    background: #F1F5FD 3px 6px no-repeat url('../../images/facebook_logo.png');
+
+    resize: none;
+    padding: 10px;
   }
 
   .advoc-fb-share {
     @include advoc-table();
-    width: 100%;
-    height: 100%;
+    @include advoc-height-width(100%,100%);
 
-    background-color: $fbcolor;
-    background-image: url('../../images/facebook_logo.png');
-    background-position: 5%;
+    background: $fbcolor 5% no-repeat url('../../images/facebook_logo.png');
     background-size: auto 75%;
-    background-repeat: no-repeat;
 
     padding-left: 15%;
     border-radius: 5px;
@@ -620,15 +565,15 @@ a:focus {
 
   .advoc-tw-textarea {
     @extend .advoc-fb-textarea;
+    background-color: #F2FAFE;
     background-image: url('../../images/twitter_logo.png');
     border-color: $twcolor;
-    background-color: #F2FAFE;
   }
 
   .advoc-tw-share {
     @extend .advoc-fb-share;
-    background-image: url('../../images/twitter_logo.png');
     background-color: $twcolor;
+    background-image: url('../../images/twitter_logo.png');
   }
 
   ///*

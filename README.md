@@ -11,6 +11,7 @@ Great, lots of neatening and added step 3 as well
 Scss is slightly (work in progress) more readable
 
 __Added mixins for DRY-ness and readability__
+
 __More comments__
 
 
@@ -21,6 +22,7 @@ __More comments__
 Step 3 (work in progress) added
 
 __Added Main components; a top "selection segment"; a bottom "Add to cart segment"__
+
 __Proportions of components are completed__
 
 -----
@@ -35,9 +37,11 @@ __Proportions of components are completed__
 	- Edit div container for X symbol
 	- Discuss where to implement "Quantity" label (i.e. Below other parameters? Color, size, quantity. OR Above/ Beside the TOTAL label?)
 	- Plan: .js will hide irrelavant parameters upon selection (i.e. When user clicks on Size, the correponding advoc-select-size container is revealed on the right hand side)
-	- Add "add to cart" animations (AS MENTIONED: __foresees user have to wait after clicking a button; ensure they are aware: something in the background__)
+	- Add "add to cart" animations 
+	
+	(AS MENTIONED: __foresees user have to wait after clicking a button; ensure they are aware: something in the background__)
 
-__End__
+__End of updates__
 -----
 
 * __Initial commit__

@@ -7,20 +7,31 @@
 $white: #ffffff;
 $black: #000000;
 
-//For text colors
+//  For text colors
 $lightgrey: #C0C0C0;
 $grey: #999999;
 $darkgrey: #575757;
 $green: #45B571;
 
-//Background colors
+//  Background colors
 $backgroundgrey: #EFEFEF;
 $fbcolor: #394F8E;
 $twcolor: #59BDEE;
 
 ///*
 //------------------------------------------------------------
-//CSS.
+//SCSS MIXINS
+//------------------------------------------------------------
+//*/
+
+@mixin advoc-table() {
+  display: table;
+  text-align: center;
+}
+
+///*
+//------------------------------------------------------------
+//Actual CSS.
 //------------------------------------------------------------
 //*/
 
@@ -32,7 +43,7 @@ html {
 }
 
 body {
-margin:0;
+  margin:0;
 }
 
 a {
@@ -48,159 +59,169 @@ a:focus {
 
 ///*
 //------------------------------------------------------------
-//Content containers.
+//Main declarations.
 //------------------------------------------------------------
 //*/
 
-//This is the container simulating the background
+//  This is the container simulating the background
+//  Everything is inside advoc-modal-container
+//  Css are sorted into Positioning, Display & Box Model, Others
 
 .advoc-modal-container {
+    /* Positioning */
   position: absolute;
-  background-color: white;
+
+   /* Display & Box Model */
   height: 100%;
   width: 100%;
-
   margin: 0;
+  
+    /* Other */
+  background-color: white;
+  background-image: url('../../images/advocbackground.jpg');
+  background-repeat: repeat-x;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #333333;
-  background-image: url('../../images/advocbackground.jpg');
-  background-repeat: repeat-x;
+  
 
-  //This part makes sure padding does not overflow from boxes
+  //  This part makes sure padding does not overflow from boxes
 
   *,
   *:before,
   *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box; }
+    box-sizing: border-box; 
+  }
 
-  //The ticks in the steps are hidden at first
-
+  //  The ticks in the steps are hidden at first
   .advoc-steps .advoc-tick {
     visibility: hidden;
   }
 
-  //Other steps are hidden at first
-  .advoc-step2-fb-panel, .advoc-step2-tw-panel {
+  //  Other steps are hidden at first
+  .advoc-step2-fb-panel,
+  .advoc-step2-tw-panel {
     display: none;
   }
 
-  //This class is used to centralise text in another div set to display:table
+  //  This class is used to centralise text vertically in another div (set to display:table)
   .advoc-center {
     display: table-cell;
     vertical-align: middle;
   }
 
-  //This part hides the normal borders of the HTML button
-
+  //  This part hides the normal borders of the HTML button
   button {
-  display: block;
-  border: 0px;
-  margin: auto;
-  type: button;
-  background-color: $white;
+    display: block;
+    border: 0px;
+    margin: auto; 
+
+    type: button;
+    background-color: $white;
   }
 
   ///*
   //------------------------------------------------------------
-  //text
+  //Text
   //------------------------------------------------------------
   //*/
 
-  //b is used for step numbers!
-  //h1 is used for titles/ large text!
-  //h2, h3 used for prices!
-  //h4, h5 used for steps prompt!
-  //h6 used for footer!
+  //  b is used for step numbers! (By default vertically centralised)
+  //  h1 is used for titles/ large text!
+  //  h2, h3 used for prices!
+  //  h4, h5 used for steps prompt!
+  //  h6 used for footer!
 
   b {
+    @extend .advoc-center;
+
+    padding-bottom: 5px;
+    padding-left: 2px;
+    margin: 0px;
+    
     font-family: "Bree Serif", sans-serif;
     font-size: 2.2em;
     line-height: 0.8;
-    margin: 0px;
-    padding-bottom: 5px;
-    padding-left: 2px;
-    
     color: $darkgrey;
-    display: table-cell;
-    vertical-align: middle;
   }
 
-  .advoc-stepper1 b {
-    color: $white;
-  }
+  //  Default step 1 text is white
+  .advoc-stepper1 b { color: $white; }
 
   p {
-    text-align: center;
     margin: 0px;
+
+    text-align: center;
     font-family: Helvetica, Arial, sans-serif;
-    color: $grey;
     font-size: 0.75em;
+    color: $grey;
   }
 
   h1 {
     margin: 0px;
-    text-align: center;
-    color: $green;
 
+    text-align: center;    
     font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
     font-size: 1.35em;
+    color: $green;    
   }
 
-  //Only the header has largest text than all other elements
-
+  //  Only the header has largest text than all other elements
   .advoc-header h1 {
     letter-spacing: -2px;
     font-size: 2em;
   }
 
-  //In step one, the prompt is black and the names (FB/TW) are white
-
+  //  In step one, the prompt is black and the names (FB/TW) are white
   .advoc-step1-panel {
     .advoc-prompt h1 {
-    color: $black;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1;
+      color: $black;
     }
 
     .advoc-name h1 {
-    color: $white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-left: 10px;
-    text-align: left;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-left: 10px;
+      text-align: left;
+      color: $white;
     }
   }
 
-  //This is setting the prompts in step 2 to white
-
+  //  In step two, the prompt is white
+  //  Facebook settings
   .advoc-step2-fb-panel {
     .advoc-fb-share h1 {
-    color: $white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+      color: $white;
     }
   }
 
+  //  Twitter settings
   .advoc-step2-tw-panel {
     .advoc-tw-share h1 {
-    color: $white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+      color: $white;
     }
   }
 
-  h2, h3 {
-    margin: 0px;
-    text-align: center;
+  h2,
+  h3 {
     padding: 2px;
+    margin: 0px;
+
+    text-align: center;
     font-family: "Bree Serif", Helvetica, Arial, sans-serif;
   }
 
+  //  Price tag is green
   h2 {
-    color: $green;
     line-height: 0.9;
+    color: $green;
   }
 
   .advoc-compare-price h3 {
@@ -209,35 +230,29 @@ a:focus {
     font-size: 1em;
   }
 
+  //  Steps 2 & 3 prompt are dark grey
   h4, h5 {
     margin: 0px;
-    color: $darkgrey;
+
     line-height: 1;
+    color: $darkgrey;
   }
 
-  h4 {
-    font-size: 0.70em;
-  }
+  h4 { font-size: 0.70em; }
+  h5 { font-size: 0.55em; }
 
-  h5 {
-    font-size: 0.55em;
-  }
-
-  .advoc-stepper1 h4, .advoc-stepper1 h5 {
-    color: $white;
+  //  Steps 1 prompt are white
+  .advoc-stepper1 h4,
+  .advoc-stepper1 h5 { 
+    color: $white; 
   }
 
   h6 {
     margin: 0px;
-    text-align: center;
-    color: $lightgrey;
-    font-family: Helvetica, Arial, sans-serif;
-  }
 
-  .advoc-step2-panel h6 {
-    margin: 5%;
-    color: $lightgrey;
+    text-align: center;
     font-family: Helvetica, Arial, sans-serif;
+    color: $lightgrey;
   }
 
   ///*
@@ -250,9 +265,13 @@ a:focus {
     position: absolute;
     background-color: $white;
     
-    /*border: 0px solid $grey;
-    border: 0px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0px;*/
+    /*
+      //  For border insert this
+      border: 0px solid $grey;
+      border: 0px solid rgba(0, 0, 0, 0.2);
+      border-radius: 0px;
+    */
+
     outline: none;
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -264,12 +283,12 @@ a:focus {
   }
 
   .advoc-header {
+    @include advoc-table();
+
     background-color: $backgroundgrey;
     height: 10%;
     width: 100%;
     border-bottom: 1px solid #e5e5e5;
-    display: table;
-    text-align: center;
   }
 
   .advoc-body {
@@ -281,13 +300,13 @@ a:focus {
   }
 
   .advoc-footer {
+    @include advoc-table();
+
     position: absolute;
     background-color: $backgroundgrey;
     height: 15%;
     width: 100%;
     bottom: 0px;
-    display: table;
-    text-align: center;
   }
 
   ///*
@@ -305,7 +324,7 @@ a:focus {
     background-size: contain;
   }
 
-  //The logo is placed above all other things as a static overlay
+  //  The logo is placed above all other things as a static overlay
 
   .advoc-logo {
     height: 20px;
@@ -333,7 +352,7 @@ a:focus {
     border-bottom-color: #b4b4b4;
   }
 
-  //This is to create the transparent effect as seen in the mockups
+  //  This is to create the transparent effect as seen in the mockups
 
   .advoc-transparent {
     position: absolute;
@@ -345,21 +364,20 @@ a:focus {
   }
 
   .advoc-title {
+    @include advoc-table();
+
     position: relative;
     height: 100%;
     width: 75%;
     float: left;
     z-index: 1;
-    display: table;
-    text-align: center;
   }
 
   .advoc-prices {
+    @include advoc-table();
     position: relative;
     width: 25%;
     height: 100%;
-    display: table;
-    text-align: center;
 
     float: right;
     border-left-width: 1px;
@@ -417,12 +435,12 @@ a:focus {
   }
 
   .advoc-step-num {
+    @include advoc-table();
+
     position: relative;
     width: 25%;
     height: 100%;
     float: left;
-    display: table;
-    text-align: center;
   }
 
   .advoc-step-block {
@@ -452,19 +470,19 @@ a:focus {
   }
 
   .advoc-prompt {
+    @include advoc-table();
+
     position: relative;
     width: 100%;
     height: 35%;
-    display: table;
-    text-align: center;
   }
 
   .advoc-social {
+    @include advoc-table();
+
     position: relative;
     width: 100%;
     height: 65%;
-    display: table;
-    text-align: center;
   }
 
   .advoc-fb {
@@ -507,14 +525,14 @@ a:focus {
   }
 
   .advoc-name {
+    @include advoc-table();
+
     width: 75%;
     height: 100%;
     float: right;
     border-left-width: 3px;
     border-left-style: solid;
     border-left-color: $white;
-    display: table;
-    text-align: center;
   }
 
   ///*
@@ -524,10 +542,10 @@ a:focus {
   //*/
 
   form {
+    @include advoc-table();
+
     height: 100%;
     width: 100%;
-    display: table;
-    text-align: center;
   }
 
   .advoc-input-panel {
@@ -557,8 +575,8 @@ a:focus {
   }
 
   .advoc-step2-fb-panel button, .advoc-step2-tw-panel button {
-    display: table;
-    text-align: center;
+    @include advoc-table();
+
     height: 100%;
     width: 100%;
     padding: 0px;
@@ -572,6 +590,8 @@ a:focus {
   }
 
   .advoc-fb-share {
+    @include advoc-table();
+
     width: 100%;
     height: 100%;
 
@@ -584,8 +604,6 @@ a:focus {
     padding-left: 15%;
     border-radius: 5px;
     margin: auto;
-    display: table;
-    text-align: center;
   }
 
   .advoc-tw-textarea {

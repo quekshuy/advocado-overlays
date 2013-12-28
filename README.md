@@ -1,3 +1,98 @@
+##Updates
+
+-----
+
+* __Second major update! (Dec 28 10pm -> Dec 29 7:30am)__
+
+Great, lots of neatening and added step 3 as well 
+
+-----
+
+Scss is slightly (work in progress) more readable
+
+__Added mixins for DRY-ness and readability__
+
+__More comments__
+
+
+.js file has been updated with more animations (work in progress) 
+
+-----
+
+Step 3 (work in progress) added
+
+__Added Main components; a top "selection segment"; a bottom "Add to cart segment"__
+
+__Proportions of components are completed__
+
+-----
+* __NEXT TO DO:__
+
+
+1. Continue tidying upp SCSS; use bootstrap names where possible; Restructure SCSS classes to improve readability
+2. NOTE: Mobile hover issues
+3. 
+	Step 3: 
+	- Add div container for parameters (size, color, etc.) and arrange text on top
+	- Edit div container for X symbol
+	- Discuss where to implement "Quantity" label (i.e. Below other parameters? Color, size, quantity. OR Above/ Beside the TOTAL label?)
+	- Plan: .js will hide irrelavant parameters upon selection (i.e. When user clicks on Size, the correponding advoc-select-size container is revealed on the right hand side)
+	- Add "add to cart" animations 
+	
+	(AS MENTIONED: __foresees user have to wait after clicking a button; ensure they are aware: something in the background__)
+
+__End of updates__
+-----
+
+* __Initial commit__
+
+Okay, I'll try to keep this concised, but it's supposed to log all the (correct/ completed) things that I've done.
+
+Nearly lost all my work an hour ago.. But luckily dropbox had version histories, haha.
+
+Anyway, below are the current updates:
+
+-----
+
+
+* __First Git Sync (22 Dec 4:30am):__
+
+
+-----
+Changed/ redid entire .CSS file into .SCSS file.
+
+__Added more comments in .scss files as a guide__
+
+-----
+Corrected overlay size
+
+Added :hover effect (Will not work on mobile though; we need some discussion on this) 
+
+Corrected white space problem (I'd experimented quite a few solutions and decided vertical-align of display:table will be the best method)
+
+Fixed text sizes and proportions (i.e. Make all of the text sizes more similar to the mockups)
+
+Redid buttons (Logo is positioned better)
+
+-----
+__(In step 2)__
+
+Created internal padding for textarea
+
+Fixed position and size of logo in text area.
+
+Fixed buttons
+
+Created twitter layout (+colors +logos +buttons)
+
+-----
+* __NEXT TO DO:__
+
+1. Redo media queries for different mobile sizes (Simulate different device viewports) and correct any display issues
+2. Discuss changes that might have to be made from the design (A. Mobile :hover issues B. I removed a few weird paddings as seen in the design I'd received, for example the padding on the right in the textarea of step 2.)
+3. Discuss how to move on to step 3 (Or improve on existing transitions). I suppose you guys already have a server set up for sharing purposes? Do I need to put in a caller for FB/TW APIs? Or how else should I make the HTML file? (Currently, the share button will submit the form into another file)
+
+
 advocado-overlays
 =================
 
@@ -70,6 +165,3 @@ The below are some things we learnt that you may already know. If you do already
 ##Miscellaneous
 
 * Feel free to experiment with technologies as you are writing. Go ahead and play with tools like Grunt to do CSS and HTML minification. It'll take some time to pick up but it's definitely useful. 
-
-
-

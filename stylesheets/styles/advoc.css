@@ -1,0 +1,496 @@
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%; }
+
+body {
+  margin: 0; }
+
+a {
+  color: #0088cc;
+  text-decoration: none; }
+
+a:hover,
+a:focus {
+  color: #005580;
+  text-decoration: underline; }
+
+.advoc-modal-container {
+  /* Positioning */
+  position: absolute;
+  /* Display & Box Model */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* Other */
+  background: white repeat-x url("../../images/advocbackground.jpg");
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333; }
+  .advoc-modal-container *,
+  .advoc-modal-container *:before,
+  .advoc-modal-container *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .advoc-modal-container .advoc-steps .advoc-tick {
+    visibility: hidden; }
+  .advoc-modal-container .advoc-step2-fb-panel,
+  .advoc-modal-container .advoc-step2-tw-panel,
+  .advoc-modal-container .advoc-step3-panel {
+    display: none; }
+  .advoc-modal-container .advoc-center, .advoc-modal-container b {
+    display: table-cell;
+    vertical-align: middle; }
+  .advoc-modal-container button {
+    display: block;
+    border: 0px;
+    margin: auto;
+    type: button;
+    background-color: white; }
+  .advoc-modal-container b {
+    padding-bottom: 5px;
+    padding-left: 2px;
+    margin: 0px;
+    font-family: "Bree Serif", sans-serif;
+    font-size: 2.2em;
+    line-height: 0.8;
+    color: #575757; }
+  .advoc-modal-container .advoc-stepper1 b {
+    color: white; }
+  .advoc-modal-container p {
+    margin: 0px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.72em;
+    color: silver; }
+  .advoc-modal-container h1 {
+    margin: 0px;
+    text-align: center;
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+    font-size: 1.30em;
+    color: #45b571; }
+  .advoc-modal-container .advoc-header h1 {
+    letter-spacing: -2px;
+    font-size: 1.8em;
+    line-height: 0.9; }
+  .advoc-modal-container .advoc-step1-panel .advoc-prompt h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 0.9;
+    font-weight: normal;
+    color: #575757; }
+  .advoc-modal-container .advoc-step1-panel .advoc-name h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    text-align: left;
+    color: white; }
+  .advoc-modal-container .advoc-step2-fb-panel h1,
+  .advoc-modal-container .advoc-step2-tw-panel h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: white; }
+  .advoc-modal-container h2,
+  .advoc-modal-container h3 {
+    padding: 2px;
+    margin: 0px;
+    text-align: center;
+    font-family: "Bree Serif", Helvetica, Arial, sans-serif; }
+  .advoc-modal-container h2 {
+    line-height: 0.9;
+    font-size: 1.4em;
+    color: #45b571; }
+  .advoc-modal-container .advoc-compare-price h3 {
+    text-decoration: line-through;
+    line-height: 0.9;
+    font-size: 1em; }
+  .advoc-modal-container h4, .advoc-modal-container h5 {
+    margin: 0px;
+    line-height: 1;
+    color: #575757; }
+  .advoc-modal-container h4 {
+    font-size: 0.70em; }
+  .advoc-modal-container h5 {
+    font-size: 0.55em; }
+  .advoc-modal-container .advoc-stepper1 h4,
+  .advoc-modal-container .advoc-stepper1 h5 {
+    color: white; }
+  .advoc-modal-container h6 {
+    margin: 0px;
+    line-height: 0.9;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    color: silver; }
+  .advoc-modal-container .advoc-modal-content {
+    position: absolute;
+    left: 4%;
+    right: 4%;
+    bottom: 1%;
+    top: 1%;
+    /*
+      //  For border insert this
+      border: 0px solid $grey;
+      border: 0px solid rgba(0, 0, 0, 0.2);
+      border-radius: 0px;
+    */
+    outline: none;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-color: white; }
+  .advoc-modal-container .advoc-header {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 8%;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #efefef; }
+  .advoc-modal-container .advoc-body {
+    position: absolute;
+    bottom: 0px;
+    height: 92%;
+    width: 100%;
+    background-color: white; }
+  .advoc-modal-container .advoc-footer {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 14%;
+    position: absolute;
+    bottom: 0px;
+    background-color: #efefef; }
+  .advoc-modal-container .advoc-product-image {
+    position: relative;
+    height: 50%;
+    background: center no-repeat url("../../images/product.png");
+    background-size: contain; }
+  .advoc-modal-container .advoc-logo {
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background: no-repeat url("../../images/logo.png");
+    background-size: 72px 20px;
+    z-index: 10; }
+  .advoc-modal-container .advoc-caption-container {
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    bottom: 0px;
+    border-top-width: 2px;
+    border-top-style: dashed;
+    border-top-color: #b4b4b4;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #b4b4b4; }
+  .advoc-modal-container .advoc-transparent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    /* For IE8 and earlier */
+    background-color: white; }
+  .advoc-modal-container .advoc-title {
+    display: table;
+    text-align: center;
+    width: 75%;
+    height: 100%;
+    position: relative;
+    float: left;
+    z-index: 1; }
+  .advoc-modal-container .advoc-prices {
+    display: table;
+    text-align: center;
+    width: 25%;
+    height: 100%;
+    position: relative;
+    float: right;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #b4b4b4;
+    z-index: 1; }
+  .advoc-modal-container .advoc-sharing {
+    width: 100%;
+    height: 50%;
+    position: relative; }
+  .advoc-modal-container .advoc-steps {
+    width: 100%;
+    height: 18%;
+    position: relative;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #45b571; }
+  .advoc-modal-container .advoc-stepper1 {
+    width: 39%;
+    height: 100%;
+    float: left;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+    /* Safari */
+    background-color: #45b571; }
+  .advoc-modal-container .advoc-stepper2, .advoc-modal-container .advoc-stepper3 {
+    width: 29%;
+    height: 100%;
+    float: left;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #b4b4b4;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+    /* Safari */ }
+  .advoc-modal-container .advoc-stepper3 {
+    width: 32%; }
+  .advoc-modal-container .advoc-step-num, .advoc-modal-container .advoc-step-block {
+    display: table;
+    text-align: center;
+    width: 25%;
+    height: 100%;
+    position: relative;
+    float: left; }
+  .advoc-modal-container .advoc-step-block {
+    float: right;
+    width: 75%;
+    text-align: left; }
+  .advoc-modal-container .advoc-step1-panel,
+  .advoc-modal-container .advoc-step2-fb-panel,
+  .advoc-modal-container .advoc-step2-tw-panel,
+  .advoc-modal-container .advoc-step3-panel {
+    width: 100%;
+    height: 68%;
+    position: relative;
+    top: 0px; }
+  .advoc-modal-container .advoc-prompt {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    position: relative; }
+  .advoc-modal-container .advoc-social {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 70%;
+    position: relative; }
+  .advoc-modal-container .advoc-fb, .advoc-modal-container .advoc-tw {
+    position: relative;
+    width: 180px;
+    height: 40px;
+    margin: 0px auto 4px auto;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #efefef; }
+  .advoc-modal-container .advoc-fb:hover, .advoc-modal-container .advoc-tw:hover {
+    background-color: #394f8e; }
+  .advoc-modal-container .advoc-fb-logo, .advoc-modal-container .advoc-tw-logo {
+    float: left;
+    width: 25%;
+    height: 100%;
+    background: 80% 75% no-repeat url("../../images/facebook_logo.png");
+    background-size: 60%; }
+  .advoc-modal-container .advoc-tw {
+    background-color: #efefef; }
+  .advoc-modal-container .advoc-tw:hover {
+    background: #59bdee; }
+  .advoc-modal-container .advoc-tw-logo {
+    background-image: url("../../images/twitter_logo.png");
+    background-position: center; }
+  .advoc-modal-container .advoc-name {
+    display: table;
+    text-align: center;
+    float: right;
+    width: 75%;
+    height: 100%;
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-left-color: white; }
+  .advoc-modal-container .advoc-step2-fb-panel form,
+  .advoc-modal-container .advoc-step2-tw-panel form {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%; }
+  .advoc-modal-container .advoc-input-panel {
+    position: relative;
+    width: 90%;
+    height: 60%;
+    margin: 0px auto 5px auto; }
+  .advoc-modal-container .advoc-step2-fb-panel button,
+  .advoc-modal-container .advoc-step2-tw-panel button {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px; }
+  .advoc-modal-container .advoc-submit {
+    width: 90%;
+    height: 35px;
+    position: relative;
+    margin: auto; }
+  .advoc-modal-container .advoc-fb-textarea, .advoc-modal-container .advoc-tw-textarea {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: solid 2px #394f8e;
+    background: #f1f5fd 3px 6px no-repeat url("../../images/facebook_logo.png");
+    resize: none;
+    padding: 10px; }
+  .advoc-modal-container .advoc-fb-share, .advoc-modal-container .advoc-tw-share {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #394f8e 5% no-repeat url("../../images/facebook_logo.png");
+    background-size: auto 75%;
+    padding-left: 15%;
+    border-radius: 5px;
+    margin: auto; }
+  .advoc-modal-container .advoc-tw-textarea {
+    background-color: #F2FAFE;
+    background-image: url("../../images/twitter_logo.png");
+    border-color: #59bdee; }
+  .advoc-modal-container .advoc-tw-share {
+    background-color: #59bdee;
+    background-image: url("../../images/twitter_logo.png"); }
+  .advoc-modal-container .advoc-step3-panel form {
+    display: table;
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    margin: auto; }
+  .advoc-modal-container .advoc-options {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 45%;
+    position: relative;
+    border-bottom-width: 2px;
+    border-bottom-style: dashed;
+    border-bottom-color: #b4b4b4; }
+  .advoc-modal-container .advoc-dropdown-container {
+    position: relative;
+    margin: auto; }
+  .advoc-modal-container .advoc-param-container {
+    display: table;
+    text-align: center;
+    width: 30%;
+    height: 80%;
+    position: relative;
+    float: left; }
+  .advoc-modal-container .advoc-select-container {
+    display: table;
+    text-align: center;
+    width: 30%;
+    height: 80%;
+    position: relative;
+    float: right; }
+  .advoc-modal-container .advoc-add-to-cart {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 55%;
+    position: relative; }
+
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
+
+.animated.hinge {
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0); } }
+
+@-moz-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(20px); }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0); } }
+
+@-o-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(20px); }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0); } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
+
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px); } }
+
+@-moz-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0); }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-20px); } }
+
+@-o-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0); }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-20px); } }
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-20px); } }
+
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  -moz-animation-name: fadeOutLeft;
+  -o-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft; }

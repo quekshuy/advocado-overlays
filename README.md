@@ -1,5 +1,7 @@
 ##Updates
 
+-----
+
 * __Second major update! (Dec 28 10pm -> Dec 29 7:30am)__
 
 Great, lots of neatening and added step 3 as well 
@@ -11,7 +13,6 @@ Scss is slightly (work in progress) more readable
 __Added mixins for DRY-ness and readability__
 __More comments__
 
------
 
 .js file has been updated with more animations (work in progress) 
 
@@ -24,17 +25,19 @@ __Proportions of components are completed__
 
 -----
 * __NEXT TO DO:__
+
+
 1. Continue tidying upp SCSS; use bootstrap names where possible; Restructure SCSS classes to improve readability
 2. NOTE: Mobile hover issues
 3. 
-Step 3: 
-- Add div container for parameters (size, color, etc.) and arrange text on top
-- Edit div container for X symbol
-- Discuss where to implement "Quantity" label (i.e. Below other parameters? Color, size, quantity. OR Above/ Beside the TOTAL label?)
-- Plan: .js will hide irrelavant parameters upon selection (i.e. When user clicks on Size, the correponding advoc-select-size container is revealed on the right hand side)
-- Add "add to cart" animations (AS MENTIONED: __foresees user have to wait after clicking a button; ensure they are aware: something in the background__)
+	Step 3: 
+	- Add div container for parameters (size, color, etc.) and arrange text on top
+	- Edit div container for X symbol
+	- Discuss where to implement "Quantity" label (i.e. Below other parameters? Color, size, quantity. OR Above/ Beside the TOTAL label?)
+	- Plan: .js will hide irrelavant parameters upon selection (i.e. When user clicks on Size, the correponding advoc-select-size container is revealed on the right hand side)
+	- Add "add to cart" animations (AS MENTIONED: __foresees user have to wait after clicking a button; ensure they are aware: something in the background__)
 
-* __End__
+__End__
 -----
 
 * __Initial commit__
